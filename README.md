@@ -15,6 +15,7 @@ DES termasuk ke dalam sistem kriptografi simetri dan tergolong jenis cipher blok
   
 Tabel matriks permutasi digunakan untuk Initial Permutation awal pada plaintext. Urutan bit pada plaintext, urutan ke-58 ditaruh pada posisi awal. Urutan bit ke-50 ditaruh pada kolom kedua baris pertama (posisi kedua), dst.
 
+  
   private static final byte[] IP = { 	
 		58, 50, 42, 34, 26, 18, 10, 2,	
 		60, 52, 44, 36, 28, 20, 12, 4,
@@ -25,7 +26,8 @@ Tabel matriks permutasi digunakan untuk Initial Permutation awal pada plaintext.
 		61, 53, 45, 37, 29, 21, 13, 5,
 		63, 55, 47, 39, 31, 23, 15, 7
 	};
-  
+	
+	
 
 Generate key yang akan digunakan untuk mengenkripsi plaintext menggunakan tabel matriks permutasi kompresi PC-1. Pada langkah ini terjadi kompresi dengan membuang 1 bit tiap baris kunci dari 64 bit menjadi 56 bit. PC-1 ini dipermutasi berdasrkan key.
   
